@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@700;800&display=swap');
+
+:root { --navy:#0d2b5c; --turquoise:#00a7b8; --blue:#1e88e5; --pink:#e91e63; --ink:#102a4d; --muted:#65758d; --line:#dce8f0; --paper:#f4f8fc; font-family:Manrope,system-ui,sans-serif; color:var(--ink); background:var(--paper); }
+* { box-sizing:border-box; }
+body { margin:0; min-width:320px; background:var(--paper); }
+button,input { font:inherit; } button { cursor:pointer; }
+.topbar { height:78px; padding:0 max(5vw,24px); display:flex; align-items:center; justify-content:space-between; background:#fff; border-bottom:1px solid var(--line); position:relative; z-index:5; }.student-topbar{max-width:1180px;height:72px;margin:18px auto 0;padding:0 22px;border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 38px #0d2b5c0e}.student-topbar+.dashboard{padding-top:18px}.dashboard>.dashboard-tabs{display:none}
+.brand { display:flex; align-items:center; gap:10px; color:var(--navy); text-decoration:none; font-size:21px; font-weight:800; }
+.brand>span:last-child span { color:var(--turquoise); }.brand>span:last-child b,.brand>span:last-child small{display:block}.brand>span:last-child small{margin-top:2px;color:#6a829b;font-size:6px;letter-spacing:.8px}
+.brand-mark { width:40px; height:40px; display:grid; place-items:center; border-radius:14px; color:#fff; background:var(--navy); }
+.top-actions { display:flex; align-items:center; gap:9px; }.profile { color:var(--muted); font-size:13px; }.language-picker,.student-chip{height:39px;display:flex;align-items:center;gap:7px;padding:0 11px;border:1px solid var(--line);border-radius:20px;background:#fff;color:var(--navy);font-size:11px;font-weight:700;box-shadow:0 6px 18px #0d2b5c0a}.language-picker select{border:0;outline:0;background:transparent;color:inherit;font:inherit;cursor:pointer}.student-chip{border:0}.student-chip>span{width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#fde5ef;color:var(--pink)}.student-chip i{font-style:normal;color:#8a97a8}.logout-link{border:0;background:transparent;color:#8793a6;font-size:10px}
+.refresh,.ghost,.primary { border:0; border-radius:13px; padding:11px 16px; font-weight:800; }
+.refresh { display:flex; align-items:center; gap:7px; color:var(--navy); background:#edf5fb; }.refresh svg { width:17px; fill:none; stroke:currentColor; stroke-width:2; }
+.ghost { color:var(--navy); background:#fff; border:1px solid var(--line); }.primary { width:100%; padding:16px; color:#fff; background:var(--navy); }
+.dashboard { width:min(1280px,calc(100% - 40px)); margin:auto; padding:36px 0 90px; }
+.dashboard-tabs { display:inline-flex; gap:3px; padding:5px; background:#fff; border:1px solid var(--line); border-radius:15px; box-shadow:0 8px 24px #0d2b5c0b; }
+.dashboard-tabs button { min-width:120px; padding:10px 18px; border:0; border-radius:10px; color:#73829a; background:transparent; font-weight:800; }
+.dashboard-tabs button.active { color:#fff; background:var(--navy); }
+.eyebrow { margin:0 0 10px; color:var(--turquoise); font-size:11px; font-weight:800; letter-spacing:1.8px; }
+
+/* Rewards */
+.welcome { min-height:205px; display:flex; align-items:center; justify-content:space-between; position:relative; padding:28px 4px; }
+.welcome h1 { margin:0; color:var(--navy); font-size:clamp(64px,7vw,100px); line-height:.95; letter-spacing:-5px; }.welcome h1 .hi-word { color:var(--pink); }.welcome h1 em { color:var(--navy); font-style:normal; }
+.welcome p:last-child { margin:16px 0 0; color:var(--muted); font-size:17px; font-weight:600; }.welcome-line { display:none; }
+.welcome-badge { display:flex; gap:10px; align-items:center; padding:12px 17px; background:#fff; border:1px solid var(--line); border-radius:30px; color:var(--navy); font-size:9px; font-weight:800; letter-spacing:1px; box-shadow:0 12px 30px #0d2b5c10; }.welcome-badge i { width:5px; height:5px; border-radius:50%; background:var(--pink); }
+.rewards-hero { min-height:340px; display:grid; grid-template-columns:.9fr 1.1fr; overflow:hidden; border-radius:32px; color:#fff; background:var(--navy); box-shadow:0 25px 55px #0d2b5c25; }
+.balance-focus { display:flex; flex-direction:column; justify-content:center; padding:46px 50px; position:relative; overflow:hidden; }.balance-focus:after { content:""; position:absolute; width:230px; height:230px; border:38px solid #00a7b81f; border-radius:50%; right:-80px; bottom:-125px; }
+.balance-focus>p { margin:0; color:#73e3e1; font-size:13px; font-weight:800; letter-spacing:1.8px; }.hero-balance { font-size:124px; font-weight:800; line-height:.9; letter-spacing:-8px; position:relative; z-index:1; }.balance-focus h2 { margin:11px 0 0; color:#fff; font-size:15px; letter-spacing:1.5px; }
+.hero-earning-rules { display:flex; flex-direction:column; justify-content:center; padding:38px 44px; border-left:1px solid #ffffff18; background:#ffffff08; }.hero-earning-rules>p { margin:0 0 18px; color:#79e5e1; font-size:13px; font-weight:800; letter-spacing:1.4px; }
+.hero-goals { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:14px; }.hero-goals span { padding:11px 8px; text-align:center; color:#edf9ff; background:#00a7b814; border:1px solid #00a7b84d; border-radius:11px; font-size:12px; font-weight:700; }
+.hero-rule-list { display:grid; gap:8px; }.hero-rule-list span { min-height:52px; display:grid; grid-template-columns:1fr 28px auto; align-items:center; padding:10px 15px; border-radius:12px; background:#ffffff0c; border:1px solid #ffffff16; }.hero-rule-list b { font-size:14px; }.hero-rule-list i { color:#8aa8c5; text-align:center; font-style:normal; }.hero-rule-list strong { min-width:55px; text-align:right; font-size:26px; }.rule-two strong { color:#35dbd3; }.rule-one strong { color:#59aff4; }.rule-zero strong { color:#d4dfeb; }.hero-earning-rules>small { margin-top:14px; color:#c9dced; font-size:12px; }
+.gift-section,.dollars-history { margin-top:58px; padding:38px; background:#fff; border:1px solid var(--line); border-radius:30px; box-shadow:0 18px 50px #0d2b5c0a; position:relative; }.gift-section:before { content:""; position:absolute; right:38px; top:-1px; width:120px; height:7px; border-radius:0 0 10px 10px; background:linear-gradient(90deg,var(--turquoise) 0 52%,var(--pink) 52%); }
+.section-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; margin-bottom:28px; }.section-heading h2 { margin:0; color:var(--navy); font-size:45px; line-height:1; letter-spacing:-2px; }.section-kicker,.section-heading>p { margin:9px 0 0; color:var(--muted); font-size:13px; }.section-number { width:46px; height:46px; display:grid; place-items:center; border-radius:14px; color:#007f89; background:#e3f7f7; font-size:13px; font-weight:800; }
+.gift-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }.gift-card,.secret-gift-card { min-height:370px; overflow:hidden; background:#fff; border:1px solid #d5e4ed; border-radius:23px; transition:.22s; }.gift-card:hover,.secret-gift-card:hover { transform:translateY(-5px); box-shadow:0 18px 38px #0d2b5c16; }
+.gift-image,.secret-visual { height:220px; position:relative; overflow:hidden; background:linear-gradient(145deg,#eef5fa,#e4edf6); }.gift-image img,.secret-visual img { width:100%; height:100%; object-fit:cover; }.placeholder { height:100%; display:grid; place-items:center; }.placeholder svg { width:65px; fill:none; stroke:var(--blue); stroke-width:1.25; opacity:.62; }
+.gift-status { position:absolute; left:14px; bottom:13px; padding:9px 11px; border-radius:11px; background:#fff; font-size:11px; font-weight:800; box-shadow:0 5px 16px #0d2b5c1c; }.gift-status.available { color:#007f88; background:#e5faf8; }.gift-status.saving { color:#126fb6; background:#eaf4fe; }.gift-status.not-available { color:#788196; background:#f0f1f5; }
+.gift-info { padding:20px; }.gift-info small { color:#8793a6; font-size:10px; letter-spacing:.7px; text-transform:uppercase; }.gift-info h3 { margin:7px 0 18px; color:var(--navy); font-size:20px; }.gift-info b { color:var(--navy); font-size:34px; line-height:1; }.gift-info b span { display:block; margin-top:6px; color:var(--pink); font-size:11px; }
+.gift-card.unavailable { opacity:.58; }.secret-gift-card { color:var(--navy); background:#f3fbfc; border:2px solid var(--turquoise); }.secret-visual { background:linear-gradient(145deg,#dff7f8,#eef8fc); }.secret-visual img { object-position:center; mix-blend-mode:multiply; transform:scale(1.04); }.yasik-label { position:absolute; left:14px; top:14px; padding:6px 10px; color:#fff; background:var(--navy); border-radius:12px; font:800 10px Nunito,sans-serif; }.lock-mark { position:absolute; right:13px; bottom:12px; width:35px; height:35px; display:grid; place-items:center; border-radius:11px; background:#f3a72d; }.lock-mark svg { width:18px; fill:none; stroke:#fff; stroke-width:1.8; }.secret-gift-card>div:last-child { padding:19px; }.secret-gift-card p { display:inline-block; margin:0; padding:5px 8px; border-radius:9px; color:#fff; background:var(--pink); font-size:9px; font-weight:800; letter-spacing:1px; }.secret-gift-card h3 { margin:7px 0 10px; font:700 29px "Cormorant Garamond",serif; }.secret-gift-card strong { display:block; font-size:13px; line-height:1.45; }.secret-gift-card .yasik-message { display:block; margin-top:10px; color:#007f89; font:800 12px/1.45 Nunito,sans-serif; }
+.balance-story { display:flex; align-items:center; gap:12px; }.balance-story p { max-width:390px; text-align:right; color:#536984; font-size:13px; font-weight:700; }.dollars-months { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }.star-month-card { overflow:hidden; background:#fff; border:1px solid #d4e4ed; border-radius:22px; }.star-month-card>header { min-height:175px; display:flex; justify-content:space-between; align-items:flex-start; padding:28px; }.star-month-card header small { color:#7b899e; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }.star-month-card h3 { margin:11px 0 5px; padding-left:14px; color:var(--navy); border-left:5px solid var(--pink); font-size:55px; line-height:1; letter-spacing:-3px; }.star-month-card header p { margin:5px 0; color:var(--muted); font-size:12px; }.status { padding:8px 10px; border-radius:20px; font-size:9px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; }.status.completed { color:#b51451; background:#fde8f0; }.status.in-progress { color:#007f88; background:#e2f8f6; }
+.lesson-toggle { width:100%; display:flex; justify-content:space-between; padding:15px 27px; border:0; border-top:1px solid var(--line); color:var(--navy); background:#edf6fb; font-size:12px; font-weight:800; }.lesson-toggle[aria-expanded=true] span { transform:rotate(180deg); }.lesson-list { padding:8px 25px 16px; background:#f5f9fc; }.lesson-list-title { color:#7e8ba0; font-size:9px; font-weight:800; letter-spacing:1px; }.lesson-row { min-height:57px; display:grid; grid-template-columns:60px repeat(3,1fr) 65px; gap:8px; align-items:center; border-top:1px solid var(--line); color:#586a82; font-size:10px; }.lesson-row>strong { color:var(--navy); font-size:12px; }.goal-done { color:var(--turquoise); font-weight:800; }.goal-missed { color:#9da7b7; }.lesson-dollars { text-align:right; color:#738097; font-size:16px; }.lesson-dollars.earned { color:var(--turquoise); }.empty-lessons { color:var(--muted); font-size:11px; }
+
+/* Login */
+.login-page { min-height:calc(100vh - 126px); display:grid; grid-template-columns:1.15fr .85fr; }.login-copy { display:flex; flex-direction:column; justify-content:center; padding:9vh 9vw; color:#fff; background:var(--navy); position:relative; overflow:hidden; }.login-copy h1 { margin:0; font-size:clamp(48px,6vw,80px); line-height:1; letter-spacing:-4px; }.login-copy h1 em { color:var(--pink); font-style:normal; }.login-copy>p:last-of-type { max-width:500px; color:#c9d8e8; line-height:1.7; }.orb { position:absolute; border-radius:50%; }.orb-one { width:270px; height:270px; right:-80px; bottom:-90px; background:#00a7b820; }.orb-two { width:80px; height:80px; right:17%; top:14%; background:#e91e6350; }.login-card { display:flex; flex-direction:column; justify-content:center; padding:7vh 8vw; background:#fff; }.login-card h2 { margin:0; font-size:38px; }.muted,.security-note { color:var(--muted); }.login-card form { margin-top:18px; }.login-card label { display:block; margin:16px 0; font-size:13px; font-weight:700; }.login-card input { width:100%; display:block; margin-top:8px; padding:14px; border:1px solid var(--line); border-radius:12px; outline:0; }.form-error { min-height:18px; color:var(--pink); font-size:12px; }.security-note { font-size:9px; text-align:center; }.login-divider { display:flex; align-items:center; gap:10px; margin:18px 0; color:#9ba5b5; font-size:10px; }.login-divider:before,.login-divider:after { content:""; height:1px; flex:1; background:var(--line); }.leaderboard-button { padding:13px; border:1px solid var(--line); border-radius:12px; color:var(--navy); background:#fff; font-weight:800; }
+
+/* Progress */
+.progress-page { max-width:1200px; }.progress-identity { display:flex; align-items:center; justify-content:space-between; margin:34px 0 24px; }.progress-identity h1 { margin:0; font-size:42px; }.progress-identity>div>p:last-child { color:var(--muted); }.academic-score { min-width:310px; padding:22px 80px 22px 23px; color:#fff; background:var(--navy); border-radius:21px; position:relative; }.academic-score span,.academic-score small { display:block; color:#9fe7e3; font-size:9px; }.academic-score strong { display:block; font-size:40px; }.score-ring { position:absolute; right:17px; top:12px; width:76px; height:76px; border-radius:50%; background:conic-gradient(var(--turquoise) calc(var(--score)*1%),#ffffff20 0); }.score-ring:after { content:""; position:absolute; inset:11px; border-radius:50%; background:var(--navy); }.panel { padding:28px; background:#fff; border:1px solid var(--line); border-radius:23px; }.latest-progress { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }.latest-progress h2 { margin:0; }.latest-progress p { color:var(--muted); }.latest-progress>div:last-child { text-align:right; }.latest-progress>div:last-child span { color:var(--muted); font-size:10px; }.latest-progress>div:last-child strong { display:block; color:var(--turquoise); font-size:36px; }.progress-table-wrap { overflow-x:auto; }.progress-section-title h2 { margin:0; font-size:28px; }.tracker-intro { color:var(--muted); font-size:11px; }.progress-table { width:100%; table-layout:fixed; border-collapse:collapse; }.progress-table th,.progress-table td { padding:13px 7px; border-top:1px solid #e9eff4; text-align:left; }.progress-table thead th { vertical-align:top; border:0; color:var(--muted); font-size:9px; }.progress-table thead th:first-child { width:92px; }.progress-table thead th:last-child { width:100px; }.progress-table thead strong,.progress-table thead small { display:block; }.progress-table thead strong { color:var(--navy); font-size:13px; }.month-comment { min-height:125px; margin:12px 0 0; padding:17px; color:#3c506b; background:#f1f6fa; border-left:4px solid var(--turquoise); border-radius:10px; font-size:14px; line-height:1.6; }.skill-group th { padding:18px 7px 7px; color:#7d899c; font-size:9px; letter-spacing:1px; text-transform:uppercase; }.homework-group th { color:var(--pink); }.academic-bar { height:29px; min-width:85px; overflow:hidden; background:#e9eef4; border-radius:8px; position:relative; }.academic-bar i { position:absolute; inset:0 auto 0 0; border-radius:8px; }.academic-bar b { position:relative; height:100%; display:flex; align-items:center; padding-left:8px; color:var(--navy); font-size:9px; }.academic-bar.high i { background:#52d1ca; }.academic-bar.medium i { background:#ffc45d; }.academic-bar.developing i { background:#eb70b4; }.overall-cell,.average-heading { background:#effafa; border-left:2px solid #bce8e5!important; text-align:center!important; }.progress-mobile { display:none; }.no-progress { margin-top:20px; text-align:center; }
+
+/* Leaderboard and shared */
+.leaderboard-page { max-width:1100px; margin:auto; padding:55px 25px; }.leaderboard-hero { text-align:center; }.leaderboard-hero h1 { margin:0; font-size:46px; }.leader-head,.leader-row { display:grid; grid-template-columns:2.2fr 1.3fr .7fr .7fr .7fr; gap:14px; align-items:center; }.leader-head { padding:10px; color:#8c98aa; font-size:9px; }.leader-row { min-height:75px; padding:12px 10px; border-top:1px solid var(--line); }.leader-person { display:flex; align-items:center; gap:11px; }.place { width:22px; }.avatar { width:42px; height:42px; display:grid; place-items:center; border-radius:13px; color:#007e87; background:#e3f8f7; font-size:12px; font-weight:800; }.leader-person strong,.leader-person small { display:block; }.leader-person small,.leader-course { color:var(--muted); font-size:10px; }.earned { color:var(--pink); }.privacy-note { text-align:center; color:var(--muted); font-size:10px; }.purchases { margin-top:30px; }.purchase-list>div { display:grid; grid-template-columns:1fr 1fr auto; padding:12px 0; border-top:1px solid var(--line); }.notice { position:fixed; right:20px; bottom:20px; z-index:10; padding:12px 17px; color:#fff; background:var(--navy); border-radius:11px; transform:translateY(80px); opacity:0; transition:.2s; }.notice.show { transform:none; opacity:1; }.notice.success { background:#008d87; }.notice.warning { background:#b07a16; }.notice.error { background:var(--pink); }.loading-page,.error-page { min-height:calc(100vh - 78px); display:grid; place-items:center; text-align:center; }.loader { width:40px; height:40px; margin:auto; border:4px solid #dce7ef; border-top-color:var(--pink); border-radius:50%; animation:spin .7s linear infinite; } footer { padding:20px; text-align:center; color:#8a97a8; background:#fff; font-size:10px; } @keyframes spin { to { transform:rotate(360deg); } }
+
+@media(max-width:900px) {
+  .rewards-hero { grid-template-columns:1fr; }.hero-earning-rules { border-left:0; border-top:1px solid #ffffff18; }.gift-grid { grid-template-columns:repeat(2,1fr); }.login-page { grid-template-columns:1fr; }.login-copy { min-height:42vh; }.progress-identity { display:block; }.academic-score { margin-top:20px; }.leader-head { display:none; }.leader-row { grid-template-columns:1fr auto auto; }.leader-course,.leader-row>b:last-child { display:none; }
+}
+@media(max-width:600px) {
+  .topbar { height:auto; padding:13px 15px; }.brand>span:last-child,.profile { display:none; }.dashboard { width:calc(100% - 28px); padding:25px 0 60px; }.dashboard-tabs { display:flex; width:100%; }.dashboard-tabs button { flex:1; min-width:0; }.welcome { min-height:150px; }.welcome h1 { font-size:58px; letter-spacing:-3px; }.welcome p:last-child { font-size:14px; }.welcome-badge { display:none; }.rewards-hero { border-radius:24px; }.balance-focus,.hero-earning-rules { padding:28px 24px; }.hero-balance { font-size:88px; }.hero-goals { grid-template-columns:1fr; }.hero-goals span { text-align:left; }.gift-section,.dollars-history { margin-top:35px; padding:23px 17px; border-radius:24px; }.section-heading h2 { font-size:37px; }.section-number { display:none; }.section-kicker { font-size:12px; }.gift-grid { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px; }.gift-card,.secret-gift-card { min-width:230px; min-height:350px; scroll-snap-align:start; }.gift-image,.secret-visual { height:205px; }.dollars-months { grid-template-columns:1fr; }.balance-story { display:block; }.balance-story p { text-align:left; }.star-month-card h3 { font-size:48px; }.lesson-row { grid-template-columns:54px 1fr 58px; }.lesson-row>span:nth-child(3),.lesson-row>span:nth-child(4) { grid-column:2; }.lesson-row>span:last-child { grid-column:3; grid-row:1/span 3; }.progress-table-wrap,.latest-progress { display:none; }.progress-mobile { display:grid; gap:14px; }.progress-month-card header { display:flex; justify-content:space-between; border-bottom:1px solid var(--line); }.progress-month-card header h2 { margin:0; }.mobile-skill { display:grid; grid-template-columns:90px 1fr; gap:8px; align-items:center; padding:7px 0; font-size:10px; }.mobile-comment { margin-top:12px; padding:13px; background:#edf9f8; border-radius:11px; }.login-copy { padding:55px 8vw; }.login-copy h1 { font-size:42px; }.login-card { padding:50px 9vw; }
+}
+
+/* Reference-matched student header and light rewards hero. */
+.student-topbar .brand{display:none}.student-topbar{max-width:1280px;margin-top:20px;background:#ffffffd9;backdrop-filter:blur(18px)}.student-topbar .dashboard-tabs{box-shadow:none}.student-topbar .top-actions{margin-left:auto}.rewards-page .welcome{min-height:180px;padding:18px 2px}.welcome-brand{display:flex;align-items:center;gap:14px}.welcome-mascot{width:145px;height:130px;overflow:hidden;display:block}.welcome-mascot img{width:260px;height:150px;object-fit:cover;object-position:right center;mix-blend-mode:multiply;transform:translateX(-105px)}.welcome-brand>span:last-child b,.welcome-brand>span:last-child small{display:block}.welcome-brand>span:last-child b{font-size:36px;letter-spacing:1px;color:var(--navy)}.welcome-brand>span:last-child b em{font-style:normal;color:var(--turquoise)}.welcome-brand>span:last-child small{margin-top:5px;color:var(--turquoise);font-size:8px;letter-spacing:2px}.rewards-page .rewards-hero{min-height:390px;grid-template-columns:1fr 1fr;color:var(--navy);background:#fff;box-shadow:0 20px 50px #0d2b5c15;border:1px solid var(--line)}.rewards-page .balance-focus{display:block;padding:34px 38px;background:linear-gradient(160deg,#fff 0 73%,#dff7f7 73%);overflow:hidden}.balance-copy{position:relative;z-index:2}.rewards-page .balance-focus>p,.rewards-page .balance-copy>p{margin:0;color:var(--turquoise);font-size:12px;font-weight:800;letter-spacing:1.3px}.rewards-page .hero-balance{color:var(--navy);font-size:105px;line-height:.9;letter-spacing:-7px}.rewards-page .balance-focus h2{color:var(--navy);font-size:16px;line-height:1.15}.rewards-page .balance-focus:after{display:none}.wallet-hero{position:absolute;right:5px;bottom:-15px;width:66%;height:365px;object-fit:contain;object-position:center bottom;mix-blend-mode:multiply}.rewards-page .hero-earning-rules{color:var(--navy);background:#fff;border-left:1px solid var(--line);padding:38px 42px}.rewards-page .hero-earning-rules>p{color:var(--turquoise)}.rewards-page .hero-goals span{color:var(--navy);background:#fff;border:1px solid #dbe8f1;box-shadow:0 7px 18px #0d2b5c0a}.rewards-page .hero-rule-list span{color:var(--navy);background:#fff;border:1px solid #e0eaf1}.rewards-page .hero-rule-list b{color:var(--navy)}.rewards-page .hero-rule-list i{color:var(--turquoise)}.rewards-page .hero-earning-rules>small{color:var(--muted)}
+@media(max-width:900px){.welcome-brand{display:none}.rewards-page .rewards-hero{grid-template-columns:1fr}.wallet-hero{width:55%}.rewards-page .hero-earning-rules{border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:600px){.student-topbar{margin:10px 10px 0;padding:10px 12px;height:auto;flex-wrap:wrap;gap:9px}.student-topbar .dashboard-tabs{order:1;width:auto}.student-topbar .top-actions{order:2}.language-picker{padding:0 8px}.student-chip{padding:0 8px}.logout-link{display:none}.rewards-page .welcome{min-height:145px}.rewards-page .rewards-hero{min-height:0}.rewards-page .balance-focus{min-height:315px;padding:28px 24px}.wallet-hero{width:68%;height:285px;right:-18px}.rewards-page .hero-balance{font-size:85px}.rewards-page .hero-earning-rules{padding:28px 24px}}
+
+/* Harmonized balance illustration layout. */
+.rewards-page .balance-focus{display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:12px;padding:34px 25px 30px 38px;background:#f4fafc;overflow:hidden}.balance-copy{position:relative;z-index:2;align-self:center}.rewards-page .hero-balance{font-size:102px;margin:8px 0 13px}.rewards-page .balance-focus h2{margin:0}.wallet-hero{position:static;width:100%;height:325px;object-fit:contain;object-position:center;mix-blend-mode:multiply;filter:drop-shadow(0 14px 18px #0d2b5c18)}
+@media(max-width:900px){.wallet-hero{width:100%}}
+@media(max-width:600px){.rewards-page .balance-focus{min-height:300px;grid-template-columns:.72fr 1.28fr;padding:25px 15px 23px 22px}.wallet-hero{width:100%;height:250px}.rewards-page .hero-balance{font-size:80px}}
+.hero-rule-list>span{grid-template-columns:1fr 98px 24px auto}.mini-note{width:94px;height:30px;display:flex!important;align-items:center;justify-content:center;overflow:hidden;border:0;border-radius:0;box-shadow:none;background:transparent}.mini-note img{display:block;width:94px;height:30px;object-fit:fill;max-width:none;border:0;border-radius:0;box-shadow:none}.note-space{width:94px}.hero-rule-list>span>i{color:var(--turquoise);text-align:center;font-style:normal}
+
+/* Premium kids polish for the existing rewards hero. */
+.rewards-page .welcome{min-height:170px;padding:24px 4px 28px}.rewards-page .welcome h1{font-size:clamp(68px,7vw,98px)}
+.rewards-page .rewards-hero{min-height:440px;grid-template-columns:1fr 1fr;border-radius:34px;border:1px solid #d8e7f1;box-shadow:0 18px 45px #0d2b5c0d;background:#fff}
+.rewards-page .balance-focus{position:relative;grid-template-columns:.68fr 1.32fr;gap:4px;padding:46px 24px 38px 46px;background:#fbfdff;border-right:1px solid #e4edf4}
+.rewards-page .hero-balance{font-size:116px;margin:12px 0 15px;line-height:.82}.rewards-page .balance-focus h2{font-size:17px;letter-spacing:1.6px}
+.wallet-hero{height:370px;filter:drop-shadow(0 16px 20px #0d2b5c18)}
+.history-button{display:inline-flex;align-items:center;gap:8px;margin-top:23px;padding:10px 16px;border:1px solid #cfe1ed;border-radius:14px;color:var(--navy);background:#fff;font-size:12px;font-weight:800;box-shadow:0 7px 18px #0d2b5c0a}.history-button svg{width:17px;fill:none;stroke:var(--turquoise);stroke-width:1.7}.sparkle{position:absolute;color:#f4c84c;z-index:3;line-height:1}.sparkle-one{left:29%;top:27%;font-size:25px}.sparkle-two{right:5%;top:18%;font-size:15px}
+.rewards-page .hero-earning-rules{justify-content:center;padding:39px 42px;background:#fff;border:0}.rewards-page .hero-earning-rules>p{margin-bottom:16px;font-size:13px;letter-spacing:1.2px}
+.rewards-page .hero-goals{gap:10px;margin-bottom:17px}.rewards-page .hero-goals span{min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 8px;border-radius:14px;box-shadow:0 5px 15px #0d2b5c08;font-size:11px}.hero-goals svg{width:18px;height:18px;fill:none;stroke:var(--turquoise);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.hero-goals span:nth-child(2) svg{stroke:#6b72d9}.hero-goals span:nth-child(3) svg{stroke:#e7a72e}
+.rewards-page .hero-rule-list{gap:10px}.rewards-page .hero-rule-list>span{min-height:67px;grid-template-columns:42px 1fr 98px 24px 48px;padding:8px 13px 8px 10px;border-radius:18px;border-color:#deebf3;box-shadow:0 6px 18px #0d2b5c08}.rule-badge{width:38px;height:38px;display:grid!important;place-items:center!important;padding:0!important;border:0!important;border-radius:50%!important;font-size:16px;font-weight:800}.rule-two .rule-badge{color:#00a7b8;background:#e4f8f7!important}.rule-one .rule-badge{color:#6d72dd;background:#eef0ff!important}.rule-zero .rule-badge{color:#94a5b8;background:#eef3f7!important}.rewards-page .hero-rule-list b{font-size:14px}.rewards-page .hero-rule-list strong{min-width:44px;font-size:27px}.mini-note{width:94px;height:31px}.mini-note img{width:94px;height:31px}.note-space{width:94px}
+.rewards-page .earning-hint{min-height:36px;display:flex;align-items:center;gap:9px;margin-top:13px;padding:8px 11px;border-radius:12px;color:#708199;background:#f5f9fc;font-size:10px}.earning-hint>span{width:18px;height:18px;display:grid;place-items:center;flex:0 0 auto;border:1px solid #a8bdcd;border-radius:50%;color:#69839a;font-size:10px;font-weight:800}
+@media(max-width:900px){.rewards-page .rewards-hero{grid-template-columns:1fr}.rewards-page .balance-focus{border-right:0;border-bottom:1px solid #e4edf4}.rewards-page .hero-earning-rules{padding:36px}.wallet-hero{height:330px}}
+@media(max-width:600px){.rewards-page .welcome{min-height:135px;padding:15px 2px 22px}.rewards-page .welcome h1{font-size:58px}.rewards-page .rewards-hero{border-radius:25px}.rewards-page .balance-focus{grid-template-columns:.74fr 1.26fr;min-height:330px;padding:28px 16px 25px 24px}.rewards-page .hero-balance{font-size:82px}.rewards-page .balance-focus h2{font-size:13px}.wallet-hero{height:270px}.sparkle-one{left:31%;top:24%}.sparkle-two{right:4%;top:15%}.rewards-page .hero-earning-rules{padding:28px 18px}.rewards-page .hero-goals{grid-template-columns:1fr}.rewards-page .hero-goals span{justify-content:flex-start;padding-left:15px}.rewards-page .hero-rule-list>span{grid-template-columns:34px 1fr 70px 18px 38px;min-height:62px;padding:7px}.rule-badge{width:31px;height:31px}.mini-note{width:68px;height:23px}.mini-note img{width:68px;height:23px}.note-space{width:68px}.rewards-page .hero-rule-list strong{min-width:34px;font-size:22px}.history-button{margin-top:17px;padding:9px 12px}}
+
+/* Readability pass: clear for children, polished for adults. */
+.rewards-page .rewards-hero{min-height:500px;grid-template-columns:1fr 1fr}
+.rewards-page .balance-focus{grid-template-columns:.62fr 1.38fr;padding:54px 30px 48px 50px}
+.rewards-page .balance-copy>p,.rewards-page .hero-earning-rules>p{font-size:14px;letter-spacing:1.35px}
+.rewards-page .hero-balance{font-size:128px;letter-spacing:-8px;margin:16px 0 18px}
+.rewards-page .balance-focus h2{font-size:18px;line-height:1.2}
+.wallet-hero{height:410px;mix-blend-mode:multiply}
+.history-button{min-height:43px;margin-top:26px;padding:10px 17px;font-size:13px}
+.rewards-page .hero-earning-rules{padding:46px 44px}
+.rewards-page .hero-goals{gap:11px;margin-bottom:20px}
+.rewards-page .hero-goals span{min-height:54px;padding:10px 9px;border-radius:15px;font-size:12px;line-height:1.25}
+.hero-goals svg{width:19px;height:19px;flex:0 0 auto}
+.rewards-page .hero-rule-list{gap:12px}
+.rewards-page .hero-rule-list>span{min-height:76px;grid-template-columns:46px 1fr 108px 27px 52px;padding:10px 16px 10px 12px;border-radius:18px}
+.rule-badge{width:40px;height:40px;font-size:17px}
+.rewards-page .hero-rule-list b{font-size:16px}
+.rewards-page .hero-rule-list strong{min-width:48px;font-size:30px}
+.mini-note{width:104px;height:34px}.mini-note img{width:104px;height:34px}
+.rewards-page .hero-rule-list .note-space{width:104px;height:1px;min-height:0;padding:0;border:0!important;background:transparent!important;box-shadow:none!important}
+.rewards-page .earning-hint{min-height:43px;margin-top:16px;padding:10px 13px;font-size:11px;line-height:1.4}
+.earning-hint>span{width:20px;height:20px}
+@media(max-width:1050px) and (min-width:901px){.rewards-page .balance-focus{padding-left:34px}.rewards-page .hero-earning-rules{padding:38px 30px}.rewards-page .hero-goals span{font-size:10px}.rewards-page .hero-rule-list>span{grid-template-columns:40px 1fr 88px 22px 44px}.mini-note,.mini-note img{width:86px;height:28px}.rewards-page .hero-rule-list .note-space{width:86px}.rewards-page .hero-balance{font-size:112px}}
+@media(max-width:900px){.rewards-page .rewards-hero{min-height:0}.rewards-page .balance-focus{min-height:430px;padding:42px}.rewards-page .hero-earning-rules{padding:42px}.wallet-hero{height:370px}}
+@media(max-width:600px){.rewards-page .balance-focus{min-height:340px;padding:28px 18px 26px 25px}.rewards-page .hero-balance{font-size:86px;margin:11px 0 13px}.rewards-page .balance-copy>p,.rewards-page .hero-earning-rules>p{font-size:12px}.rewards-page .balance-focus h2{font-size:13px}.wallet-hero{height:280px}.history-button{min-height:38px;margin-top:17px;font-size:11px}.rewards-page .hero-earning-rules{padding:30px 18px}.rewards-page .hero-goals span{min-height:48px;font-size:12px}.rewards-page .hero-rule-list>span{min-height:66px;grid-template-columns:34px 1fr 72px 18px 38px;padding:8px}.rule-badge{width:30px;height:30px;font-size:13px}.rewards-page .hero-rule-list b{font-size:13px}.mini-note,.mini-note img{width:70px;height:23px}.rewards-page .hero-rule-list .note-space{width:70px}.rewards-page .hero-rule-list strong{font-size:23px}.rewards-page .earning-hint{font-size:10px}}
+
+/* Unified reward-level markers. */
+.rewards-page .hero-rule-list>span{position:relative;transition:border-color .18s ease,background-color .18s ease}
+.rewards-page .hero-rule-list>span:hover{border-color:#c8dce9;background:#fcfeff}
+.rewards-page .rule-badge{position:relative;width:38px;height:38px;border:1px solid transparent!important;font-family:Manrope,system-ui,sans-serif;font-size:0!important;box-shadow:inset 0 0 0 5px #ffffff80}
+.rewards-page .rule-badge:before{content:"";display:block;width:14px;height:14px}
+.rewards-page .rule-two .rule-badge{background:#e5f8f6!important;border-color:#c5ece8!important}.rewards-page .rule-two .rule-badge:before{background:#00a7b8;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}
+.rewards-page .rule-one .rule-badge{background:#eef0ff!important;border-color:#dadefa!important}.rewards-page .rule-one .rule-badge:before{width:12px;height:12px;background:#626fd0;transform:rotate(45deg);border-radius:3px}
+.rewards-page .rule-zero .rule-badge{background:#f0f5f8!important;border-color:#dfe8ee!important}.rewards-page .rule-zero .rule-badge:before{width:13px;height:2px;border-radius:2px;background:#8fa1b4}
+.rewards-page .hero-rule-list b{letter-spacing:-.15px;line-height:1.2}
+@media(max-width:600px){.rewards-page .rule-badge{width:30px;height:30px}.rewards-page .rule-badge:before{transform:scale(.85)}.rewards-page .rule-one .rule-badge:before{transform:rotate(45deg) scale(.85)}}
+
+/* Playful dimensional goal badges and larger labels. */
+.rewards-page .hero-rule-list>span{grid-template-columns:54px 1fr 108px 27px 52px;column-gap:5px}
+.rewards-page .hero-rule-list b{font-family:Nunito,Manrope,sans-serif;font-size:19px;font-weight:800;letter-spacing:-.25px}
+.rewards-page .rule-badge{width:46px;height:46px;border-width:2px!important;box-shadow:inset 0 0 0 5px #ffffff8f,0 5px 0 #0d2b5c0d,0 9px 18px #0d2b5c10}
+.rewards-page .rule-badge:after{content:"";position:absolute;left:9px;top:7px;width:10px;height:5px;border-radius:50%;background:#fff;opacity:.9;transform:rotate(-24deg)}
+.rewards-page .rule-badge:before{width:18px;height:18px;filter:drop-shadow(0 2px 1px #0d2b5c22)}
+.rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#f4ffff 8%,#c9f4f0 100%)!important;border-color:#aee7e3!important}
+.rewards-page .rule-two .rule-badge:before{background:linear-gradient(145deg,#20c7c9,#009ba9)}
+.rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#fafaff 8%,#dddfff 100%)!important;border-color:#cbd0fa!important}
+.rewards-page .rule-one .rule-badge:before{width:15px;height:15px;background:linear-gradient(145deg,#8a8ff0,#5361c9);border-radius:4px}
+.rewards-page .rule-zero .rule-badge{background:linear-gradient(145deg,#fff 8%,#e5edf3 100%)!important;border-color:#d5e1e9!important}
+.rewards-page .rule-zero .rule-badge:before{width:17px;height:3px;background:#8499ae;box-shadow:0 2px 0 #fff;border-radius:5px}
+@media(max-width:1050px) and (min-width:901px){.rewards-page .hero-rule-list>span{grid-template-columns:48px 1fr 88px 22px 44px}.rewards-page .hero-rule-list b{font-size:17px}.rewards-page .rule-badge{width:41px;height:41px}}
+@media(max-width:600px){.rewards-page .hero-rule-list>span{grid-template-columns:42px 1fr 72px 18px 38px;column-gap:3px}.rewards-page .hero-rule-list b{font-size:16px}.rewards-page .rule-badge{width:36px;height:36px}.rewards-page .rule-badge:after{left:7px;top:6px;width:8px;height:4px}}
+
+/* Banknotes have no additional UI frame; their printed border remains part of the artwork. */
+.rewards-page .hero-rule-list>span>.mini-note{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;min-height:0}
+.rewards-page .hero-rule-list>span>.mini-note img{border:0!important;border-radius:0!important;box-shadow:none!important}
+
+/* Larger proportional banknotes and a fresh illustrated badge set. */
+.rewards-page .hero-rule-list>span{grid-template-columns:58px 1fr 134px 28px 54px}
+.rewards-page .hero-rule-list>span>.mini-note{width:130px;height:48px;overflow:visible}
+.rewards-page .hero-rule-list>span>.mini-note img{width:130px!important;height:48px!important;object-fit:contain!important}
+.rewards-page .hero-rule-list .note-space{width:130px}
+.rewards-page .rule-badge{width:50px;height:50px;overflow:hidden}
+.rewards-page .rule-badge:before{filter:drop-shadow(0 2px 1px #0d2b5c25)}
+/* Crown: a big achievement. */
+.rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#fff9d9,#ffd85e)!important;border-color:#f4c541!important}
+.rewards-page .rule-two .rule-badge:before{width:24px;height:20px;background:linear-gradient(#ff9f27,#f47b20);clip-path:polygon(0 25%,25% 52%,50% 0,75% 52%,100% 25%,88% 100%,12% 100%)}
+.rewards-page .rule-two .rule-badge:after{left:11px;top:8px;width:12px;height:6px;background:#fff7b8;opacity:.95}
+/* Lightning: one energetic step forward. */
+.rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#f5edff,#c9b7ff)!important;border-color:#b8a2f4!important}
+.rewards-page .rule-one .rule-badge:before{width:22px;height:27px;background:linear-gradient(145deg,#8c62ed,#5a47cf);transform:none;border-radius:0;clip-path:polygon(55% 0,18% 54%,48% 54%,35% 100%,84% 39%,55% 39%)}
+.rewards-page .rule-one .rule-badge:after{left:11px;top:8px;width:11px;height:6px;background:#fff;opacity:.75}
+/* Sprout: the beginning of the learning path. */
+.rewards-page .rule-zero .rule-badge{background:linear-gradient(145deg,#effff8,#bdebd7)!important;border-color:#a7dec6!important}
+.rewards-page .rule-zero .rule-badge:before{width:5px;height:24px;background:#34a77d;border-radius:5px;box-shadow:none;transform:translateY(5px)}
+.rewards-page .rule-zero .rule-badge:after{left:12px;top:11px;width:25px;height:16px;border-radius:16px 16px 3px 16px;background:linear-gradient(145deg,#64d8a6,#20aa77);opacity:1;transform:rotate(10deg);clip-path:polygon(0 55%,42% 0,100% 8%,72% 75%,43% 100%)}
+@media(max-width:1050px) and (min-width:901px){.rewards-page .hero-rule-list>span{grid-template-columns:48px 1fr 104px 22px 44px}.rewards-page .hero-rule-list>span>.mini-note{width:100px;height:37px}.rewards-page .hero-rule-list>span>.mini-note img{width:100px!important;height:37px!important}.rewards-page .hero-rule-list .note-space{width:100px}.rewards-page .rule-badge{width:42px;height:42px}}
+@media(max-width:600px){.rewards-page .hero-rule-list>span{grid-template-columns:42px 1fr 82px 18px 38px}.rewards-page .hero-rule-list>span>.mini-note{width:80px;height:30px}.rewards-page .hero-rule-list>span>.mini-note img{width:80px!important;height:30px!important}.rewards-page .hero-rule-list .note-space{width:80px}.rewards-page .rule-badge{width:36px;height:36px}.rewards-page .rule-two .rule-badge:before{width:18px;height:15px}.rewards-page .rule-one .rule-badge:before{width:17px;height:21px}.rewards-page .rule-zero .rule-badge:before{height:18px}.rewards-page .rule-zero .rule-badge:after{left:8px;top:8px;width:20px;height:13px}}
+
+/* Clean level markers without inner symbols. */
+.rewards-page .rule-badge:before,.rewards-page .rule-badge:after{display:none!important;content:none!important}
+
+/* Compact, readable progress bars using the YASNOLAND palette. */
+.academic-bar{width:100%;max-width:260px;height:28px;background:#edf3f8;border:1px solid #e2ebf2;border-radius:9px}
+.academic-bar i{border-radius:8px}
+.academic-bar.high i{background:#16b8b4}
+.academic-bar.medium i{background:#4e91df}
+.academic-bar.developing i{background:#e85b92}
+.academic-bar b{padding-left:9px;color:#0d2b5c;font-size:10px;font-weight:800}
+@media(max-width:600px){
+  .progress-month-card{padding:21px 18px}
+  .mobile-skill{grid-template-columns:minmax(112px,42%) minmax(0,1fr);gap:12px;min-height:52px;padding:9px 0;font-size:13px}
+  .mobile-skill>span{min-width:0;color:var(--navy);font-weight:800;line-height:1.25;overflow-wrap:break-word}
+  .mobile-skill .academic-bar{justify-self:end;width:100%;max-width:150px;height:27px}
+}
+@media(max-width:390px){
+  .mobile-skill{grid-template-columns:minmax(108px,45%) minmax(0,1fr);gap:9px}
+  .mobile-skill .academic-bar{max-width:128px}
+}
+
+/* Desktop progress table: enough room for localized skill names. */
+.progress-table thead th:first-child{width:112px}
+.progress-table tbody th:first-child,.progress-table tbody td:first-child{padding-left:8px;padding-right:16px;white-space:normal;overflow-wrap:anywhere;line-height:1.3}
+.progress-table .academic-bar{width:min(100%,260px);margin-right:auto}
+@media(min-width:1000px){
+  .progress-table thead th:first-child{width:118px}
+  .progress-table tbody th:first-child,.progress-table tbody td:first-child{font-size:13px}
+}
+
+/* Friendly dimensional progress bars. */
+.academic-bar{height:32px;overflow:hidden;border:2px solid #dce8f1;border-radius:16px;background:#edf3f8;box-shadow:inset 0 2px 5px #0d2b5c0b,0 2px 0 #fff;isolation:isolate}
+.academic-bar i{inset:0 auto 0 0;border-radius:14px;box-shadow:inset 0 -4px 0 #0d2b5c0b,0 2px 5px #0d2b5c10}
+.academic-bar i:after{content:"";position:absolute;left:8px;right:8px;top:4px;height:7px;border-radius:10px;background:#ffffff65}
+.academic-bar.high i{background:linear-gradient(180deg,#35d0ca,#08aaa9)}
+.academic-bar.medium i{background:linear-gradient(180deg,#68a8ed,#367fd2)}
+.academic-bar.developing i{background:linear-gradient(180deg,#f17ca8,#df477e)}
+.academic-bar b{z-index:2;padding-left:12px;color:#0d2b5c;font-family:Nunito,Manrope,sans-serif;font-size:11px;text-shadow:0 1px 0 #ffffff80}
+@media(max-width:600px){.mobile-skill .academic-bar{height:30px;border-radius:15px}.academic-bar i{border-radius:13px}}
+
+/* Progress table styled as clear color-coded capsules. */
+.progress-table th,.progress-table td{height:68px;padding:12px 14px;border-color:#dce7ef}
+.progress-table tbody tr:not(.skill-group):nth-child(even){background:#f7fafc}
+.progress-table .academic-bar,.progress-mobile .academic-bar{height:36px;max-width:none;border:0;border-radius:20px;background:#e7eff5;box-shadow:none}
+.progress-table .academic-bar i,.progress-mobile .academic-bar i{border-radius:20px;box-shadow:none}
+.progress-table .academic-bar i:after,.progress-mobile .academic-bar i:after{display:none}
+.progress-table .academic-bar.high i,.progress-mobile .academic-bar.high i{background:#12abc4}
+.progress-table .academic-bar.medium i,.progress-mobile .academic-bar.medium i{background:#ffad28}
+.progress-table .academic-bar.developing i,.progress-mobile .academic-bar.developing i{background:#ef3677}
+.progress-table .academic-bar b,.progress-mobile .academic-bar b{justify-content:center;padding:0;color:#062d51;font-family:Nunito,Manrope,sans-serif;font-size:14px;font-weight:800;text-shadow:none}
+.progress-table tbody th:first-child{color:#073b6c;font-size:16px;font-weight:800}
+.progress-table .overall-cell,.progress-table .average-heading{background:#eaf8fc;border-left:3px solid #08a9cf!important}
+.progress-table .overall-cell{padding-left:16px;padding-right:16px}
+.progress-table .overall-cell .academic-bar{margin:auto}
+.progress-table thead .average-placeholder{background:transparent!important;border:0!important}
+.progress-table .skill-group .average-heading{height:auto;padding:12px 8px;border-top:1px solid #dce7ef!important;vertical-align:middle}
+.progress-table .skill-group .average-heading strong,.progress-table .skill-group .average-heading small{display:block;text-transform:none;letter-spacing:0}
+.progress-table .skill-group .average-heading strong{color:var(--navy);font-size:13px}
+.progress-table .skill-group .average-heading small{margin-top:2px;color:#65758d;font-size:8px;font-weight:600}
+
+/* Visually connect each month heading, feedback, and skill results. */
+.progress-table{border-spacing:0;border-collapse:separate;overflow:hidden;border-radius:18px}
+.progress-table thead th:not(:first-child):not(.average-placeholder){position:relative;padding:18px 16px 12px;border-top:1px solid #dce8f0;border-left:1px solid #dce8f0;border-right:1px solid #dce8f0;background:#fbfdff}
+.progress-table thead th:nth-child(2){border-top:4px solid var(--turquoise)!important;background:#f7fcfd}
+.progress-table thead th:nth-child(3){border-top:4px solid var(--pink)!important;background:#fff9fb}
+.progress-table thead th strong{font-size:16px;line-height:1.2}.progress-table thead th small{margin-top:4px;font-size:9px}
+.progress-table .month-comment{position:relative;min-height:155px;margin-top:34px;padding:20px 20px 18px;border-left:0;border-radius:15px;background:#eef4f8;font-size:13px;line-height:1.65;box-shadow:inset 0 0 0 1px #e2ebf1}
+.progress-table .month-comment:before{content:"Feedback";position:absolute;left:2px;top:-25px;color:var(--turquoise);font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+.progress-table thead th:nth-child(3) .month-comment:before{color:var(--pink)}
+.progress-table tbody tr:not(.skill-group)>td:nth-child(2){background:#f7fcfd;border-left:1px solid #dce8f0;border-right:1px solid #dce8f0}
+.progress-table tbody tr:not(.skill-group)>td:nth-child(3){background:#fff9fb;border-left:1px solid #e9e0e5;border-right:1px solid #e9e0e5}
+.progress-table tbody tr:not(.skill-group)>td{padding-left:16px;padding-right:16px}
+.progress-table .skill-group th{padding-top:20px;padding-bottom:12px;background:#fff;border-top:2px solid #d6e5ee}
+.progress-table .skill-group:first-child th{border-top:2px solid #c7dde9}
+.progress-table tbody tr:last-child td:nth-child(2),.progress-table tbody tr:last-child td:nth-child(3){border-bottom:1px solid #dce8f0}
+html[lang="ru"] .progress-table .month-comment:before{content:"Обратная связь"}
+@media(max-width:600px){.progress-mobile .academic-bar{height:32px}.progress-mobile .academic-bar b{font-size:12px}}
+
+/* Yasik joins the Progress page without changing its data structure. */
+.progress-page .progress-identity{min-height:190px;padding:26px 28px 26px 32px;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:0 16px 40px #0d2b5c0b;position:relative}
+.progress-page .progress-identity>div:first-child{position:relative;z-index:2}
+.progress-page .progress-identity:before{content:"";position:absolute;left:39%;bottom:-18px;width:230px;height:205px;background:url('/images/yasik-wallet-hero.png') center bottom/contain no-repeat;filter:drop-shadow(0 12px 15px #0d2b5c18);z-index:1}
+.progress-page .progress-identity:after{content:"Keep going!";position:absolute;left:55%;top:28px;padding:9px 14px;border:1px solid #cce7ea;border-radius:18px 18px 18px 5px;color:var(--turquoise);background:#f1fbfb;font:800 12px Nunito,Manrope,sans-serif;z-index:2}
+.progress-page .progress-identity h1{font-size:48px;letter-spacing:-1.7px;color:var(--navy)}
+.progress-page .academic-score{z-index:2;box-shadow:0 12px 28px #0d2b5c1c}
+@media(max-width:900px){.progress-page .progress-identity{display:flex;min-height:175px;padding-right:24px}.progress-page .progress-identity:before{left:43%;width:180px;height:165px}.progress-page .progress-identity:after{display:none}.progress-page .academic-score{margin:0 0 0 auto;min-width:280px}}
+@media(max-width:700px){.progress-page .progress-identity{display:block;min-height:350px;padding:25px 22px}.progress-page .progress-identity:before{left:auto;right:-10px;bottom:102px;width:180px;height:175px}.progress-page .progress-identity h1{font-size:38px}.progress-page .academic-score{position:absolute;left:18px;right:18px;bottom:18px;min-width:0;margin:0}}
+
+/* Progress header without mascot. */
+.progress-page .progress-identity:before,.progress-page .progress-identity:after{display:none!important;content:none!important}
+@media(max-width:900px){.progress-page .progress-identity{min-height:150px}}
+@media(max-width:700px){.progress-page .progress-identity{min-height:285px}}
+
+/* Mobile month-focused Progress experience. */
+.mobile-month-tabs,.mobile-year-average,.mobile-skills-title,.month-school-mark{display:none}
+@media(max-width:600px){
+  .progress-page{width:calc(100% - 20px)}
+  .progress-page .progress-identity{min-height:0;margin:18px 0 12px;padding:20px;border-radius:20px}
+  .progress-page .progress-identity h1{font-size:32px}.progress-page .progress-identity .eyebrow{font-size:9px}.progress-page .progress-identity>div>p:last-child{font-size:11px}
+  .progress-page .academic-score{display:none}
+  .progress-mobile{gap:12px}
+  .mobile-month-tabs{display:flex;gap:6px;overflow-x:auto;padding:2px 1px 6px;scrollbar-width:none}
+  .mobile-month-tabs::-webkit-scrollbar{display:none}
+  .mobile-month-tabs button{flex:0 0 auto;padding:8px 13px;border:1px solid #dce8f0;border-radius:16px;color:#65758d;background:#fff;font-size:10px;font-weight:800}
+  .mobile-month-tabs button.active{color:#fff;border-color:var(--pink);background:var(--pink);box-shadow:0 6px 14px #e91e6329}
+  .progress-month-card{display:none;padding:17px 15px 18px;border-radius:20px;box-shadow:0 12px 28px #0d2b5c0d}
+  .progress-month-card.active{display:block}
+  .progress-month-card header{min-height:82px;align-items:flex-start;padding:4px 3px 12px;border:0}
+  .progress-month-card header h2{color:var(--pink);font-size:25px}.progress-month-card header p{margin:3px 0;color:#718198;font-size:10px}
+  .month-school-mark{width:62px;height:62px;display:grid;place-items:center;border:1px solid #afe4e2;border-radius:18px;color:var(--turquoise);background:#eafafa;font-size:34px}
+  .mobile-comment{margin:0 0 17px;padding:13px 14px;border-radius:13px;border-left:3px solid var(--pink);background:#fff1f6;font-size:10px;line-height:1.55}
+  .mobile-comment b{display:block;margin-bottom:6px;color:var(--navy);font-size:10px}.mobile-comment p{margin:0}
+  .mobile-skills-title{display:block;margin:0 0 6px;padding:0 3px 8px;border-bottom:1px solid #e3ebf1;color:var(--navy);font-size:12px}
+  .mobile-skill{grid-template-columns:minmax(112px,46%) minmax(0,1fr);min-height:43px;padding:5px 2px;font-size:11px}
+  .mobile-skill .academic-bar{height:12px;border:0;background:#e8eff4}.mobile-skill .academic-bar b{position:absolute;left:calc(100% + 5px);top:-3px;width:30px;justify-content:flex-start;color:var(--navy);font-size:9px}.mobile-skill .academic-bar i{border-radius:8px}
+  .mobile-year-average{display:flex;align-items:center;gap:16px;padding:18px;border:1px solid #cce9ea;border-radius:19px;background:#eaf9f8;box-shadow:0 10px 25px #0d2b5c0b}
+  .average-wallet{width:62px;height:50px;display:grid;place-items:center;border-radius:13px;color:#fff;background:var(--turquoise);font:800 25px Nunito,sans-serif;box-shadow:0 7px 0 #087f89}
+  .mobile-year-average small{display:block;color:var(--navy);font-size:10px;font-weight:800}.mobile-year-average strong{display:block;color:var(--turquoise);font-size:35px;line-height:1}.mobile-year-average p{margin:4px 0 0;color:#65758d;font-size:8px}
+}
+
+/* The same month-card experience on tablet and desktop. */
+@media(min-width:601px){
+  .progress-page .latest-progress,.progress-page .progress-table-wrap{display:none}
+  .progress-page .progress-mobile{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:22px;align-items:start}
+  .mobile-month-tabs{grid-column:1/-1;display:flex;gap:9px;overflow-x:auto;padding:3px 2px 7px}
+  .mobile-month-tabs button{min-width:104px;padding:11px 18px;border:1px solid #d8e6ef;border-radius:18px;color:#65758d;background:#fff;font-size:12px;font-weight:800;transition:.18s}
+  .mobile-month-tabs button:hover{border-color:#ef9cba;color:var(--pink)}
+  .mobile-month-tabs button.active{color:#fff;border-color:var(--pink);background:var(--pink);box-shadow:0 8px 18px #e91e6325}
+  .progress-month-card{display:none;grid-column:1;padding:28px 30px;border-radius:25px;box-shadow:0 15px 38px #0d2b5c0d}
+  .progress-month-card.active{display:block}
+  .progress-month-card header{min-height:106px;align-items:flex-start;padding-bottom:18px;border:0}
+  .progress-month-card header h2{color:var(--pink);font-size:34px}.progress-month-card header p{margin:5px 0;color:#6d7e94;font-size:12px}
+  .month-school-mark{width:82px;height:82px;display:grid;place-items:center;border:1px solid #afe4e2;border-radius:23px;color:var(--turquoise);background:#eafafa;font-size:44px}
+  .mobile-comment{margin:0 0 22px;padding:20px 22px;border-left:4px solid var(--pink);border-radius:16px;background:#fff1f6;font-size:13px;line-height:1.65}
+  .mobile-comment b{display:block;margin-bottom:8px;color:var(--navy)}.mobile-comment p{margin:0}
+  .mobile-skills-title{display:block;margin:0 0 8px;padding:0 2px 12px;border-bottom:1px solid #e1eaf0;color:var(--navy);font-size:15px}
+  .mobile-skill{grid-template-columns:minmax(170px,34%) minmax(220px,1fr);gap:22px;min-height:58px;padding:9px 3px;font-size:14px}
+  .mobile-skill>span{color:var(--navy);font-weight:800}
+  .mobile-skill .academic-bar{max-width:420px;height:20px;border:0;background:#e8eff4}
+  .mobile-skill .academic-bar b{font-size:11px}
+  .mobile-year-average{grid-column:2;display:flex;align-items:center;gap:15px;padding:24px 20px;border:1px solid #c8e8e8;border-radius:23px;background:#eaf9f8;box-shadow:0 14px 32px #0d2b5c0c;position:sticky;top:20px}
+  .average-wallet{width:68px;height:57px;display:grid;place-items:center;flex:0 0 auto;border-radius:15px;color:#fff;background:var(--turquoise);font:800 28px Nunito,sans-serif;box-shadow:0 7px 0 #087f89}
+  .mobile-year-average small{display:block;color:var(--navy);font-size:10px;font-weight:800}.mobile-year-average strong{display:block;color:var(--turquoise);font-size:42px;line-height:1}.mobile-year-average p{margin:5px 0 0;color:#65758d;font-size:9px;line-height:1.4}
+}
+@media(min-width:601px) and (max-width:850px){.progress-page .progress-mobile{grid-template-columns:1fr}.mobile-year-average{grid-column:1;position:static}.mobile-skill{grid-template-columns:150px 1fr}}
+
+/* Readability refinement for the month-focused layout. */
+@media(min-width:851px){
+  .progress-page .progress-mobile{grid-template-columns:minmax(620px,1fr) 315px;gap:26px}
+  .progress-month-card{padding:34px 36px}
+  .progress-month-card header{display:flex;align-items:center;min-height:86px;padding:0 0 22px}
+  .progress-month-card header h2{font-size:38px;line-height:1}.progress-month-card header p{font-size:13px}
+  .month-school-mark{width:72px;height:72px;font-size:38px}
+  .mobile-comment{padding:22px 24px;font-size:14px;line-height:1.7}
+  .mobile-comment b{font-size:12px}.mobile-skills-title{font-size:16px}
+  .mobile-skill{grid-template-columns:190px minmax(260px,1fr);min-height:64px;font-size:15px}
+  .mobile-skill .academic-bar{max-width:480px;height:22px}
+  .mobile-year-average{padding:27px 23px}.mobile-year-average small{font-size:12px;line-height:1.35}.mobile-year-average strong{margin-top:4px;font-size:48px}.mobile-year-average p{font-size:10px}
+}
+
+/* Softer, calmer Progress palette. */
+.progress-page .academic-bar{background:#edf2f6}
+.progress-page .academic-bar.high i{background:#4fc7c3}
+.progress-page .academic-bar.medium i{background:#f6bd62}
+.progress-page .academic-bar.developing i{background:#e98aae}
+.progress-page .academic-bar b{color:#17385f}
+.progress-page .mobile-comment{border-left-color:#e96f9b;background:#fff4f7}
+.progress-page .mobile-month-tabs button.active{border-color:#df5f8e;background:#df5f8e;box-shadow:0 8px 18px #df5f8e22}
+.progress-page .mobile-year-average{border-color:#cfe6e6;background:#f0f9f8}
+.progress-page .mobile-year-average strong{color:#2eaaa8}
+
+/* Balanced month and unit hierarchy. */
+.progress-page .progress-month-card header h2{color:#d94f82;font-size:36px;font-weight:800;letter-spacing:-.7px}
+.progress-page .progress-month-card header p{margin-top:11px;color:#405a78;font-size:15px;font-weight:700;line-height:1.4}
+@media(max-width:600px){.progress-page .progress-month-card header h2{font-size:27px}.progress-page .progress-month-card header p{margin-top:6px;font-size:12px}}
+
+/* Goal markers match the result colors on the right. */
+.rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#efffff,#b9f1ed)!important;border-color:#35d6cf!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #18aaa51c,0 9px 18px #18aaa519}
+.rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#f2f8ff,#bfddfb)!important;border-color:#69adf0!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #4f9be51c,0 9px 18px #4f9be519}
+.rewards-page .rule-zero .rule-badge{background:linear-gradient(145deg,#f8fbfd,#dfe8f0)!important;border-color:#c8d6e2!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #8ea2b41a,0 9px 18px #8ea2b417}
+
+/* Clear desktop Progress layout without decorative icons. */
+@media(min-width:851px){
+  .progress-page{max-width:1320px}
+  .progress-page .progress-mobile{grid-template-columns:minmax(0,1fr) 330px;gap:28px}
+  .progress-month-card{padding:40px 44px;border-radius:28px}
+  .progress-month-card header{min-height:auto;padding:4px 0 24px}
+  .progress-month-card header h2{font-size:42px;letter-spacing:-1px}
+  .progress-month-card header p{margin-top:9px;font-size:14px}
+  .progress-month-card .month-school-mark{display:none}
+  .mobile-comment{margin-bottom:28px;padding:24px 27px;font-size:15px;line-height:1.75}
+  .mobile-comment b{margin-bottom:10px;font-size:13px}
+  .mobile-skills-title{margin-bottom:10px;padding-bottom:14px;font-size:18px}
+  .mobile-skill{grid-template-columns:205px minmax(320px,1fr);min-height:70px;gap:28px;font-size:16px}
+  .mobile-skill .academic-bar{width:100%;max-width:560px;height:26px}
+  .mobile-skill .academic-bar b{font-size:12px}
+  .mobile-year-average{display:block;padding:30px 28px;text-align:left}
+  .mobile-year-average .average-wallet{display:none}
+  .mobile-year-average small{font-size:13px;line-height:1.45}
+  .mobile-year-average strong{margin-top:8px;font-size:56px}
+  .mobile-year-average p{margin-top:9px;font-size:11px;line-height:1.5}
+  .mobile-month-tabs button{min-width:118px;padding:12px 20px;font-size:13px}
+}
