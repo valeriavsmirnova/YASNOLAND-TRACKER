@@ -21,6 +21,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Add current Excel data to the deployment
+        env:
+          YANDEX_PUBLIC_KEY: https://disk.yandex.ru/d/AH9oiy7YcSWXtA
+        run: |
+          API_URL="https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=$(python -c 'import os,urllib.parse; print(urllib.parse.quote(os.environ["YANDEX_PUBLIC_KEY"], safe=""))')&path=%2Fyasnoland-tracker.xlsx"
+          DOWNLOAD_URL=$(curl --fail --silent --show-error "$API_URL" | jq -r '.href')
+          test -n "$DOWNLOAD_URL" && test "$DOWNLOAD_URL" != "null"
+          curl --fail --location --silent --show-error "$DOWNLOAD_URL" --output dist/yasnoland-tracker.xlsx
+          test $(wc -c < dist/yasnoland-tracker.xlsx) -gt 1000
       - uses: actions/configure-pages@v5
         with:
           enablement: true
