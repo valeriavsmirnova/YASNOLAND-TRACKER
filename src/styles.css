@@ -383,6 +383,41 @@ html[lang="ru"] .progress-table .month-comment:before{content:"Обратная 
   body:has(.login-light)>footer{padding:13px 15px;font-size:8px}
 }
 
+/* Mobile Rewards hero: stack balance and earning rules at full width. */
+@media(max-width:600px){
+  .rewards-page .welcome{min-height:125px;padding:14px 2px 20px}
+  .rewards-page .welcome h1{font-size:49px;line-height:1;letter-spacing:-2.5px;white-space:nowrap}
+  .rewards-page .welcome p:last-child{margin-top:10px;font-size:12px}
+  .rewards-page .rewards-hero{display:flex;flex-direction:column;width:100%;overflow:hidden;border-radius:24px}
+  .rewards-page .balance-focus{order:1;display:grid;grid-template-columns:.68fr 1.32fr;width:100%;min-height:285px;padding:25px 12px 22px 22px;border-right:0;border-bottom:1px solid #e2ebf1}
+  .rewards-page .balance-copy{min-width:0}
+  .rewards-page .balance-copy>p{font-size:9px;letter-spacing:.9px;white-space:nowrap}
+  .rewards-page .hero-balance{font-size:76px;letter-spacing:-5px;margin:10px 0 11px}
+  .rewards-page .balance-focus h2{font-size:11px;line-height:1.2;letter-spacing:1px}
+  .rewards-page .wallet-hero{width:100%;height:235px;min-width:0;object-fit:contain}
+  .rewards-page .history-button{min-height:36px;margin-top:15px;padding:8px 10px;font-size:10px}
+  .rewards-page .sparkle-one{left:27%;top:20%}.rewards-page .sparkle-two{right:5%;top:12%}
+  .rewards-page .hero-earning-rules{order:2;width:100%;padding:27px 16px 22px;border:0;background:#fff}
+  .rewards-page .hero-earning-rules>p{margin-bottom:15px;font-size:11px;line-height:1.4;letter-spacing:.9px;text-align:left}
+  .rewards-page .hero-goals{grid-template-columns:1fr;gap:8px;margin-bottom:15px}
+  .rewards-page .hero-goals span{min-height:45px;padding:9px 13px;justify-content:flex-start;font-size:11px}
+  .rewards-page .hero-rule-list{gap:8px}
+  .rewards-page .hero-rule-list>span{min-height:59px;grid-template-columns:38px minmax(55px,1fr) 76px 16px 34px;column-gap:3px;padding:7px 8px;border-radius:15px}
+  .rewards-page .rule-badge{width:32px;height:32px}
+  .rewards-page .hero-rule-list b{font-size:13px;white-space:nowrap}
+  .rewards-page .hero-rule-list>span>.mini-note{width:74px;height:27px}
+  .rewards-page .hero-rule-list>span>.mini-note img{width:74px!important;height:27px!important;object-fit:contain!important}
+  .rewards-page .hero-rule-list .note-space{width:74px}
+  .rewards-page .hero-rule-list strong{min-width:31px;font-size:21px}
+  .rewards-page .earning-hint{margin-top:13px;padding:9px 10px;font-size:9px;line-height:1.45}
+}
+@media(max-width:360px){
+  .rewards-page .welcome h1{font-size:43px}
+  .rewards-page .hero-rule-list>span{grid-template-columns:34px minmax(48px,1fr) 65px 14px 31px}
+  .rewards-page .hero-rule-list>span>.mini-note,.rewards-page .hero-rule-list>span>.mini-note img{width:63px!important;height:23px!important}
+  .rewards-page .hero-rule-list .note-space{width:63px}
+}
+
 /* Goal markers match the result colors on the right. */
 .rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#efffff,#b9f1ed)!important;border-color:#35d6cf!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #18aaa51c,0 9px 18px #18aaa519}
 .rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#f2f8ff,#bfddfb)!important;border-color:#69adf0!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #4f9be51c,0 9px 18px #4f9be519}
