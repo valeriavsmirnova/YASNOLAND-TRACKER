@@ -348,6 +348,41 @@ html[lang="ru"] .progress-table .month-comment:before{content:"Обратная 
 @media(max-width:900px){.login-light{grid-template-columns:1fr}.login-light .login-copy{min-height:260px;padding:52px 8vw}.login-light .login-copy h1{font-size:48px}.login-light .login-card{width:min(580px,calc(100% - 36px));margin:-34px auto 38px;position:relative;z-index:2}}
 @media(max-width:600px){.login-light .login-copy{min-height:225px;padding:39px 25px 58px}.login-light .login-copy h1{font-size:39px;letter-spacing:-2px}.login-light .login-copy>div>p:last-child{font-size:13px}.login-light .login-card{width:calc(100% - 24px);margin:-28px auto 24px;padding:28px 22px;border-radius:24px}.login-language{margin-bottom:24px}.login-light .login-card h2{font-size:34px}.login-light .login-card input:not([type=checkbox]){height:53px}}
 
+/* Mobile-only login adaptation; desktop remains unchanged. */
+@media(max-width:600px){
+  body:has(.login-light) .topbar{min-height:64px;padding:10px 16px;background:#fff}
+  body:has(.login-light) .brand{gap:8px;font-size:17px}
+  body:has(.login-light) .brand-mark{width:38px;height:38px;border-radius:12px}
+  body:has(.login-light) .brand>span:last-child{display:block}
+  body:has(.login-light) .brand>span:last-child small{display:none}
+  body:has(.login-light) .refresh{width:39px;height:39px;justify-content:center;padding:0;border-radius:12px;font-size:0}
+  body:has(.login-light) .refresh svg{width:18px}
+  .login-light{display:block;min-height:calc(100vh - 64px);padding-bottom:18px;background:#f4f8fc}
+  .login-light .login-copy{min-height:205px;padding:31px 22px 63px;background:#edf8f8}
+  .login-light .login-copy:before{width:210px;height:210px;right:-95px;bottom:-115px;border-width:34px}
+  .login-light .login-copy:after{right:13%;top:22%;width:9px;height:9px;box-shadow:25px 25px 0 -2px var(--turquoise)}
+  .login-light .login-copy .eyebrow{margin-bottom:8px;font-size:9px}
+  .login-light .login-copy h1{max-width:330px;font-size:36px;line-height:1.02;letter-spacing:-1.8px}
+  .login-light .login-copy>div>p:last-child{max-width:315px;margin:12px 0 0;font-size:12px;line-height:1.55}
+  .login-light .login-card{width:calc(100% - 20px);margin:-35px auto 12px;padding:23px 18px 21px;border-radius:23px;box-shadow:0 18px 42px #0d2b5c14}
+  .login-language{align-self:stretch;display:grid;grid-template-columns:1fr 1fr;width:100%;margin:0 0 22px;padding:4px}
+  .login-language button{min-height:39px;min-width:0;padding:8px;font-size:12px}
+  .login-light .login-card>.eyebrow{margin-bottom:7px;font-size:9px}
+  .login-light .login-card h2{font-size:31px;letter-spacing:-1px}
+  .login-light .login-card>.muted{margin:8px 0 15px;font-size:12px;line-height:1.5}
+  .login-light .login-card form{margin-top:14px}
+  .login-light .login-card label{margin:14px 0;font-size:12px}
+  .login-light .login-card input:not([type=checkbox]){height:52px;margin-top:7px;padding:0 14px;border-radius:13px;font-size:16px}
+  .remember-login{align-items:flex-start!important;margin:13px 0 7px!important;font-size:11px!important;line-height:1.4}
+  .remember-login input{width:19px!important;height:19px!important}
+  .login-light .form-error{min-height:15px;margin:4px 0;font-size:11px}
+  .login-light .primary{min-height:53px;margin-top:2px;border-radius:14px;font-size:14px}
+  .login-light .login-divider{margin:15px 0}
+  .login-light .leaderboard-button{width:100%;min-height:46px;padding:11px;font-size:12px}
+  .login-light .security-note{max-width:280px;margin:13px auto 0;font-size:8px;line-height:1.45}
+  body:has(.login-light)>footer{padding:13px 15px;font-size:8px}
+}
+
 /* Goal markers match the result colors on the right. */
 .rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#efffff,#b9f1ed)!important;border-color:#35d6cf!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #18aaa51c,0 9px 18px #18aaa519}
 .rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#f2f8ff,#bfddfb)!important;border-color:#69adf0!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #4f9be51c,0 9px 18px #4f9be519}
