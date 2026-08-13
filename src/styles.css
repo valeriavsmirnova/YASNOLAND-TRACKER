@@ -333,6 +333,21 @@ html[lang="ru"] .progress-table .month-comment:before{content:"Обратная 
 .progress-page .progress-month-card header p{margin-top:11px;color:#405a78;font-size:15px;font-weight:700;line-height:1.4}
 @media(max-width:600px){.progress-page .progress-month-card header h2{font-size:27px}.progress-page .progress-month-card header p{margin-top:6px;font-size:12px}}
 
+/* Lightweight, login-first access screen. */
+.login-light{min-height:calc(100vh - 126px);grid-template-columns:minmax(320px,.78fr) minmax(520px,1.22fr);background:#f5f9fc}
+.login-light .login-copy{padding:8vh 6vw;color:var(--navy);background:#edf8f8}
+.login-light .login-copy:before{content:"";position:absolute;width:360px;height:360px;right:-150px;bottom:-180px;border:55px solid #00a7b80c;border-radius:50%}
+.login-light .login-copy:after{content:"";position:absolute;width:13px;height:13px;right:20%;top:24%;border-radius:50%;background:var(--pink);box-shadow:34px 32px 0 -3px var(--turquoise)}
+.login-welcome{position:relative;z-index:1;max-width:470px}.login-light .login-copy h1{color:var(--navy);font-size:clamp(45px,5vw,72px);letter-spacing:-3.5px}.login-light .login-copy h1 em{color:var(--pink)}.login-light .login-copy>div>p:last-child{max-width:430px;color:#59708a;font-size:16px;line-height:1.7}
+.login-light .login-card{align-self:center;width:min(560px,calc(100% - 50px));margin:42px auto;padding:48px 52px;border:1px solid #dbe8f0;border-radius:30px;background:#fff;box-shadow:0 24px 65px #0d2b5c12}
+.login-light .login-card h2{font-size:46px;letter-spacing:-1.7px}.login-light .login-card>.muted{margin:10px 0 17px;font-size:14px}
+.login-language{align-self:flex-end;display:flex;gap:4px;margin-bottom:31px;padding:4px;border:1px solid #dbe8f0;border-radius:14px;background:#f3f7fa}.login-language button{min-width:88px;padding:8px 12px;border:0;border-radius:10px;color:#6e7f94;background:transparent;font-size:11px;font-weight:800}.login-language button.active{color:#fff;background:var(--navy);box-shadow:0 5px 12px #0d2b5c20}
+.login-light .login-card form{margin-top:23px}.login-light .login-card label{margin:18px 0;color:var(--navy);font-size:13px}.login-light .login-card input:not([type=checkbox]){height:57px;margin-top:9px;padding:0 17px;border-color:#d4e2ec;border-radius:15px;background:#fbfdff;font-size:14px;transition:.18s}.login-light .login-card input:not([type=checkbox]):focus{border-color:#69c7ca;box-shadow:0 0 0 4px #00a7b812;background:#fff}
+.remember-login{display:flex!important;align-items:center;gap:10px;margin:14px 0 4px!important;color:#5f7188!important;font-weight:600!important}.remember-login input{width:18px!important;height:18px;flex:0 0 auto;margin:0!important;accent-color:var(--turquoise)}
+.login-light .primary{min-height:57px;margin-top:3px;border-radius:15px;font-size:15px}.login-light .leaderboard-button{min-height:48px}.login-light .security-note{margin:15px 0 0;font-size:9px}.login-light .form-error{margin:7px 0;line-height:1.4}
+@media(max-width:900px){.login-light{grid-template-columns:1fr}.login-light .login-copy{min-height:260px;padding:52px 8vw}.login-light .login-copy h1{font-size:48px}.login-light .login-card{width:min(580px,calc(100% - 36px));margin:-34px auto 38px;position:relative;z-index:2}}
+@media(max-width:600px){.login-light .login-copy{min-height:225px;padding:39px 25px 58px}.login-light .login-copy h1{font-size:39px;letter-spacing:-2px}.login-light .login-copy>div>p:last-child{font-size:13px}.login-light .login-card{width:calc(100% - 24px);margin:-28px auto 24px;padding:28px 22px;border-radius:24px}.login-language{margin-bottom:24px}.login-light .login-card h2{font-size:34px}.login-light .login-card input:not([type=checkbox]){height:53px}}
+
 /* Goal markers match the result colors on the right. */
 .rewards-page .rule-two .rule-badge{background:linear-gradient(145deg,#efffff,#b9f1ed)!important;border-color:#35d6cf!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #18aaa51c,0 9px 18px #18aaa519}
 .rewards-page .rule-one .rule-badge{background:linear-gradient(145deg,#f2f8ff,#bfddfb)!important;border-color:#69adf0!important;box-shadow:inset 0 0 0 5px #ffffff9c,0 5px 0 #4f9be51c,0 9px 18px #4f9be519}
